@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Art Vault | Quiz</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="loader" class="loader">
+            <div class="loader-content">
+                <div class="loader-spinner"></div>
+                <p>Loading The Art Vault...</p>
+            </div>
+        </div>
+
+        <div class="floating-shapes"></div>
+
+        <header class="main-header">
+            <div class="header-content">
+                <h1>The Art Vault</h1>
+                <p class="subtitle">The Canvas of Human Creativity</p>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="quiz.html" class="active">Quiz</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <main class="art-container container">
+            <section class="hero-section text-center">
+                <h2 data-aos="fade-up">Test Your Art Smarts</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Engage with art through interactive quizzes and games.</p>
+            </section>
+            
+            <section class="interactive-art-section" data-aos="fade-up">
+                <div class="game-grid">
+                    <div class="quiz-card card-item" data-aos="zoom-in">
+                        <div id="quiz-start-screen" class="quiz-state-screen" style="display: block;">
+                            <h3>Ready to Test Your Art Knowledge?</h3>
+                            <p>You'll have 15 seconds per question. Improve your art knowledge now!</p>
+                            <button id="start-quiz-btn" class="btn primary-btn">Start Quiz</button>
+                        </div>
+                        <div id="quiz-main-content" class="quiz-state-screen" style="display: none;">
+                            <h4 id="art-quiz-question"></h4>
+                            <div id="quiz-options" class="quiz-options"></div>
+                            <p id="quiz-feedback" class="quiz-feedback"></p>
+                            <p id="quiz-result" class="quiz-explanation"></p>
+                            <progress id="quiz-progress" value="0" max="10"></progress>
+                            <p id="score-display"></p>
+                            <p id="time-left-display" class="quiz-timer">Time left: 15s</p> 
+                            <button id="next-btn" style="display: none;">Next Question</button>
+                        </div>
+                        <div id="quiz-results-screen" class="quiz-state-screen" style="display: none;">
+                            <h2 class="quiz-results-title"></h2>
+                            <p class="quiz-final-score"></p>
+                            <p class="quiz-summary-message"></p>
+                            <div class="quiz-result-buttons">
+                                <button id="restart-quiz-btn" class="btn primary-btn">Restart Quiz</button>
+                                <button id="back-to-art-btn" class="btn secondary-btn">Back to Art Page</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="art-facts-section" data-aos="fade-up">
+                <h3 class="text-center" data-aos="fade-up">Did You Know?</h3>
+                <p class="text-center mb-20" data-aos="fade-up" data-aos-delay="100">Intriguing facts about art and artists.</p>
+                <button id="art-fact" class="fact-card card-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fact-header">Random Art Fact</div>
+                    <p class="fact-body">Loading a fascinating fact...</p>
+                    <p class="fact-detail">Source: Timeless Chronicles</p>
+                </button>
+                <div style="text-align: center; margin-top: 40px;" data-aos="fade-up">
+                    <h3>🎨 Create Your Own AI Art</h3>
+                    <p>Use AI to generate images based on your imagination!</p>
+                    <a href="https://www.craiyon.com/" target="_blank" class="ai-art-btn btn-primary">🖌️ Try Craiyon AI Art Generator</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="global-controls">
+            <button id="toggle-theme-btn" class="control-btn">🌓 Toggle Theme</button>
+        </div>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/quiz.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 50
+            });
+        </script>
+    </body>
+</html>
