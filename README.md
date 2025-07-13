@@ -1,5 +1,5 @@
 # The Art Vault
-https://dreamtraveller1314.github.io/The_Art__Vault/
+https://dreamtraveller1314.github.io/The_Art_Vault/
 
 **The Art Vault** is an interactive art education site where users can explore art history, test their knowledge, and discover fun facts about the world’s greatest artists.
 
